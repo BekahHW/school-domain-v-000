@@ -10,10 +10,12 @@ class School
  
  def add_student(student_name, grade)
  binding.pry
-  if roster[grade]
-  roster[grade] = []
-  roster[grade] << student_name 
-  # ||= student_name << student_name
+  if roster[grade] 
+        roster[grade] << student_name 
+  else
+    roster[grade] = []
+    roster[grade] << student_name 
+end
 end
  
 
